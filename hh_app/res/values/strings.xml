@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="sex">
         <item>муж/жен</item>
         <item>муж</item>
         <item>жен</item>
     </string-array>
+
     <string name="prompt">Выберите пол:</string>
-    <string name="app_name">HH.ru Тестовое приложение</string>
-    <string name="add_name">Введите Фамилию Имя Отчество</string>
+    <string name="app_name">hh.ru Тестовое приложение</string>
+    <string name="add_name">Введите ФИО</string>
+    <string name="add_birth">Дата рождения</string>
     <string name="action_settings">Настройки:</string>
     <string name="ok_button">OK</string>
+    <string name="add_position">Желаемая должность</string>
+    <string name="add_salary">Уровень дохода</string>
+    <string name="add_phone">Номер телефона</string>
+    <string name="add_email">Email</string>
+    <string name="add_submit">Отправить</string>
+    <string name="title_activity_display_message">hh.ru Ответ</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

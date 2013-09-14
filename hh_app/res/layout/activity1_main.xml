@@ -1,0 +1,342 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="2dp"
+    android:background="#FFAAAAAA"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".Activity1" >
+
+    <LinearLayout
+        android:id="@+id/NameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/NameLayoutEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName|textCapWords"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/buttonOK"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:onClick="onClickNameButton"
+                android:text="@string/ok_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAddName"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickNameText"
+            android:text="@string/add_name"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BirthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/textAddBirth"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:text="@string/add_birth"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <Spinner
+            android:id="@+id/spinnerSex"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:entries="@array/sex"
+            android:prompt="@string/prompt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PositionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+        <LinearLayout
+            android:id="@+id/PositionLayoutEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/editPosition"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName|textCapSentences"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/buttonOK2"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:onClick="onClickPositionButton"
+                android:text="@string/ok_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAddPosittion"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickPositionText"
+            android:text="@string/add_position"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/SalaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+        <LinearLayout
+            android:id="@+id/SalaryLayoutEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/editSalary"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/buttonOK3"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:onClick="onClickSalaryButton"
+                android:text="@string/ok_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAddSalary"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickSalaryText"
+            android:text="@string/add_salary"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/PhoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+        <LinearLayout
+            android:id="@+id/PhoneLayoutEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="phone"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/buttonOK3"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:onClick="onClickPhoneButton"
+                android:text="@string/ok_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAddPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickPhoneText"
+            android:text="@string/add_phone"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/EmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="4dp"
+        android:background="#FF8D8D8D"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+        <LinearLayout
+            android:id="@+id/EmailLayoutEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textWebEmailAddress"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/buttonOK4"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0"
+                android:onClick="onClickEmailButton"
+                android:text="@string/ok_button" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAddEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickEmailText"
+            android:text="@string/add_email"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="144dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:onClick="onClickSubmitCV"
+        android:text="@string/add_submit" />
+
+</LinearLayout>
