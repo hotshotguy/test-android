@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">HH_App</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string-array name="sex">
+        <item>муж/жен</item>
+        <item>муж</item>
+        <item>жен</item>
+    </string-array>
+    <string name="prompt">Выберите пол:</string>
+    <string name="app_name">HH.ru Тестовое приложение</string>
+    <string name="add_name">Введите Фамилию Имя Отчество</string>
+    <string name="action_settings">Настройки:</string>
+    <string name="ok_button">OK</string>
 </resources>
