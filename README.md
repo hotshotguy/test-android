@@ -1,4 +1,4 @@
 test-android
 ============
 
-My first Android Application.
+Test Android Application.
