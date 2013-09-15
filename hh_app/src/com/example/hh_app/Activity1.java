@@ -23,7 +23,6 @@ import android.widget.TextView;
 
 public class Activity1 extends Activity {
 	private TextView date;
-	private DatePicker date_picker;
 
 	private int year;
 	private int month;
@@ -228,7 +227,7 @@ public void onClickEmailText(View v) {
 	    .append("Имя: ").append(name.getText().toString()).append("\n")
 	    .append("Дата рождения: ").append(birthdate.getText().toString()).append("\n")
 	    .append("Должность: ").append(position.getText().toString()).append("\n")
-	    .append("З/П: ").append(salary.getText().toString()).append("\n")
+	    .append("З/П: ").append(salary.getText().toString()+"руб.").append("\n")
 	    .append("Телефон: ").append(phone.getText().toString()).append("\n")
 	    .append("Email: ").append(email.getText().toString()).append("\n")
 	    .toString();
