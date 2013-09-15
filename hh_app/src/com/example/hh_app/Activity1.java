@@ -23,13 +23,14 @@ import android.widget.TextView;
 
 public class Activity1 extends Activity {
 	private TextView date;
-
+	private UserData sendingUserData;
 	private int year;
 	private int month;
 	private int day;
 
 	static final int DATE_DIALOG_ID = 100;
 	public static final String EXTRA_MESSAGE = "com.example.hh_app.MESSAGE";
+	
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -227,12 +228,13 @@ public void onClickEmailText(View v) {
 	    .append("Имя: ").append(name.getText().toString()).append("\n")
 	    .append("Дата рождения: ").append(birthdate.getText().toString()).append("\n")
 	    .append("Должность: ").append(position.getText().toString()).append("\n")
-	    .append("З/П: ").append(salary.getText().toString()+"руб.").append("\n")
-	    .append("Телефон: ").append(phone.getText().toString()).append("\n")
-	    .append("Email: ").append(email.getText().toString()).append("\n")
+	    .append("З/П: ").append(salary.getText().toString())
 	    .toString();
+    	
+    	sendingUserData = new UserData(userData, phone.getText().toString(), email.getText().toString());
+    	
     	Intent intent = new Intent(this, DisplayMessageActivity.class);
-    	intent.putExtra(EXTRA_MESSAGE, userData);
+    	intent.putExtra("sendingUserData", sendingUserData);
     	startActivity(intent);
     }
 

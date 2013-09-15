@@ -10,15 +10,45 @@
     android:visibility="visible"
     tools:context=".DisplayMessageActivity" >
 
-    <TextView
-        android:id="@+id/userData"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_weight="0"
-        android:background="#50444444"
-        android:textSize="18sp" />
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+и
+        <TextView
+            android:id="@+id/userData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0"
+            android:background="#50444444"
+            android:textSize="18sp" />
 
+        <TextView
+            android:id="@+id/phoneData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0"
+            android:background="#50444444"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/emailData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0"
+            android:background="#50444444"
+            android:textSize="18sp" />
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

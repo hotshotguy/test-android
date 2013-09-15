@@ -1,5 +1,7 @@
 package com.example.hh_app;
 
+import java.io.Serializable;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -21,7 +23,7 @@ import android.os.Build;
 
 public class DisplayMessageActivity extends Activity {
 	AlertDialog.Builder builder;
-	
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,12 +31,17 @@ public class DisplayMessageActivity extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		Intent intent = getIntent();
-	    String message = intent.getStringExtra(Activity1.EXTRA_MESSAGE);
+	    UserData getUserData = (UserData)intent.getExtras().get("sendingUserData");
 
 	    TextView textView = (TextView) findViewById(R.id.userData);
-	    textView.setText(message);
-	    textView.setAutoLinkMask(Linkify.PHONE_NUMBERS);
-	    Linkify.addLinks(textView, Linkify.EMAIL_ADDRESSES);
+	    TextView phoneView = (TextView) findViewById(R.id.phoneData);
+	    TextView emailView = (TextView) findViewById(R.id.emailData);
+	    textView.setText(getUserData.getData());
+	    phoneView.setText("Телефон: " + getUserData.getPhone());
+	    emailView.setText("Email: " + getUserData.getEmail());
+
+	    Linkify.addLinks(phoneView, Linkify.PHONE_NUMBERS);
+	    Linkify.addLinks(emailView, Linkify.EMAIL_ADDRESSES);
 	    
         String title = "Ответ отправлен";
         TextView response = (TextView) findViewById(R.id.editResponse);
